@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useMemo } from "react";
+
 import { ContactPicker } from "../contactPicker/ContactPicker";
 
 const getTodayString = () => {
-  const [month, day, year] = new Date().toLocaleDateString("en-US").split("/");
+  const [month, day, year] = new Date()
+    .toLocaleDateString("en-US")
+    .split("/");
   return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
 };
 
@@ -16,8 +19,9 @@ export const AppointmentForm = ({
   setDate,
   time,
   setTime,
-  handleSubmit,
+  handleSubmit
 }) => {
+
   const contactNames = useMemo(() => {
     return contacts.map((contact) => contact.name);
   }, [contacts]);
@@ -68,12 +72,7 @@ export const AppointmentForm = ({
         />
       </label>
       <br />
-      <input
-        aria-label="
-      Add Appointment"
-        type="submit"
-        value="Add Appointment"
-      />
+      <input aria-label="Add Appointment" type="submit" value="Add Appointment" />
     </form>
   );
 };
