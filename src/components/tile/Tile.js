@@ -12,4 +12,3 @@ export const Tile = ({ name, description }) => {
     </div>
   );
 };
-/* Appointments page task #7 */
