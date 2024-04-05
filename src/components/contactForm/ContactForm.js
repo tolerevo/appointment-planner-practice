@@ -31,7 +31,7 @@ export const ContactForm = ({
           onChange={(e) => setPhone(e.target.value)}
           required
           pattern="[1-9][0-9]{2}-[1-9][0-9]{2}-[0-9]{4}"
-          placeholder="Contact Phone (##-##-####)"
+          placeholder="Contact Phone (###-###-####)"
           aria-label="Contact Phone"
         />
       </label>
